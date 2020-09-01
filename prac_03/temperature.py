@@ -15,11 +15,11 @@ def main():
     while choice != "Q":
         if choice == "C":
             celsius = float(input("Celsius: "))
-            fahrenheit = conversion_celsius_to_fehrenheit(celsius)
+            fahrenheit = conversion_celsius_to_fahrenheit(celsius)
             print("Result: {:.2f} F".format(fahrenheit))
         elif choice == "F":
             fahrenheit = float(input("Fahrenheit : "))
-            celsius = conversion_fehrenheit_to_celsius(fahrenheit)
+            celsius = conversion_fahrenheit_to_celsius(fahrenheit)
             print("Result: {:.2f} C".format(celsius))
         else:
             print("Invalid option")
@@ -28,12 +28,12 @@ def main():
     print("Thank you.")
 
 
-def conversion_fehrenheit_to_celsius(celsius, fahrenheit):
+def conversion_fahrenheit_to_celsius(celsius, fahrenheit):
     celsius = 5 / 9 * (fahrenheit - 32)
     return celsius
 
 
-def conversion_celsius_to_fehrenheit(celsius):
+def conversion_celsius_to_fahrenheit(celsius):
     fahrenheit = celsius * 9.0 / 5 + 32
     return fahrenheit
 
